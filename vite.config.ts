@@ -13,4 +13,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    allowedHosts: ['maab.com']
+  },
+  preview: {
+    allowedHosts: ['maab.com']
+  }
 });

@@ -32,7 +32,7 @@ export function NewRequestPage() {
     setError('');
     setBusy(true);
     try {
-      const { data, error: insertErr } = await supabase
+      const { error: insertErr } = await supabase
         .from('service_requests')
         .insert({
           title,

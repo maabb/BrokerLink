@@ -50,7 +50,7 @@ export function DashboardPage() {
   if (authLoading || !user || loading) return null;
 
   if (profile?.role === 'provider') {
-    return <ProviderDashboard companies={companies} proposals={proposals} userId={user.id} />;
+    return <ProviderDashboard companies={companies} proposals={proposals} />;
   }
   return <CustomerDashboard requests={requests} deals={deals} />;
 }
@@ -60,11 +60,9 @@ export function DashboardPage() {
 function ProviderDashboard({
   companies,
   proposals,
-  userId,
 }: {
   companies: Company[];
   proposals: Proposal[];
-  userId: string;
 }) {
   const company = companies[0] ?? null;
 
